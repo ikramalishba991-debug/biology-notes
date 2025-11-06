@@ -51,6 +51,30 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
+        
+        /* --- Table Styling --- */
+        .styled-table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .styled-table thead th {
+            background-color: rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+        }
+        .styled-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .styled-table code {
+            background-color: rgba(0, 0, 0, 0.08);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
 
         /* Scroll-triggered animation states */
         .scroll-animate {
@@ -184,94 +208,303 @@
             </div>
         </section>
 
-        <!-- Section 1: DNA Replication -->
+        <!-- 
+        ========================================================================
+        REPLICATION SECTION
+        ========================================================================
+        -->
         <section class="py-16 scroll-animate" id="replication">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        1. DNA Replication
+                        1. DNA Replication: A Deep Dive
                     </h2>
                     <p class="text-xl text-blue-700 text-center mb-16">
-                        Copying the Master Blueprint
+                        Copying the Master Blueprint for Exam Preparation
                     </p>
-                    <img src="https://study.com/cimages/videopreview/videopreview-full/screen_shot_2016-02-27_at_4.01.31_pm_115083.jpg" alt="DNA Replication Fork Diagram"
-                         onerror="this.src='https://placehold.co/600x400/cbe3f7/1d4ed8?text=DNA+Replication+Fork'">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="pop-card p-6">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">The Core Concept</h3>
+                            <p class="mb-4">Before a cell can divide, it must duplicate its entire genome. This process, <strong>DNA Replication</strong>, ensures that each daughter cell receives a complete and identical set of genetic instructions.</p>
+                            <p>Replication is <strong>semi-conservative</strong>: the original double helix unwinds, and each of the two parental strands serves as a <strong>template</strong> for a new, complementary strand. The result is two identical DNA molecules, each consisting of one "old" strand and one "new" strand.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">The Replication Fork</h3>
+                            <p class="mb-4">Replication doesn't happen all at once. It occurs at a Y-shaped structure called the <strong>Replication Fork</strong>, where the DNA is actively being unwound and copied. This fork moves along the DNA as replication proceeds.</p>
+                            <p>The entire complex of enzymes and proteins at the fork is called the <strong>Replisome</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 scroll-animate" id="prokaryotic-replication">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Prokaryotic Replication: The <i>E. coli</i> Model
+                    </h2>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Part 1: The Key Players (The Replisome)</h3>
+                    <div class="pop-card p-6 overflow-x-auto">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Protein</th>
+                                    <th>Gene</th>
+                                    <th>Function</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Helicase</strong></td>
+                                    <td><code>dnaB</code></td>
+                                    <td>Unwinds the double helix using ATP.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DNA Gyrase</strong> (Topo II)</td>
+                                    <td><code>gyrA, gyrB</code></td>
+                                    <td>Relieves positive supercoiling ahead of the fork.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SSB Protein</strong></td>
+                                    <td><code>ssb</code></td>
+                                    <td>Binds single-stranded DNA to prevent re-annealing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Primase</strong></td>
+                                    <td><code>dnaG</code></td>
+                                    <td>Synthesizes short RNA primers to initiate synthesis.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DNA Polymerase III</strong></td>
+                                    <td><code>dnaE, dnaQ, etc.</code></td>
+                                    <td>The main "builder." Synthesizes new DNA 5'→3' and proofreads 3'→5'.</td>
+                                </tr>
+                                <tr>
+                                    <td>- Sliding Clamp</td>
+                                    <td><code>dnaN</code></td>
+                                    <td>(&beta;-subunit) A doughnut-shaped ring that holds Pol III onto the DNA.</td>
+                                </tr>
+                                <tr>
+                                    <td>- Clamp Loader</td>
+                                    <td><code>dnaX (&gamma;, &tau;)</code></td>
+                                    <td>Loads the sliding clamp onto the DNA (requires ATP).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DNA Polymerase I</strong></td>
+                                    <td><code>polA</code></td>
+                                    <td>Removes RNA primers (5'→3' exonuclease) and fills in the gaps.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DNA Ligase</strong></td>
+                                    <td><code>lig</code></td>
+                                    <td>Seals the final "nick" between Okazaki fragments.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DnaA Protein</strong></td>
+                                    <td><code>dnaA</code></td>
+                                    <td>Initiator protein; binds to <code>oriC</code> to start replication.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tus Protein</strong></td>
+                                    <td><code>tus</code></td>
+                                    <td>Binds to <code>Ter</code> sites to terminate replication.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Topoisomerase IV</strong></td>
+                                    <td><code>parC, parE</code></td>
+                                    <td>Decatenates (untangles) the two new daughter chromosomes.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Part 2: The Process - Step-by-Step</h3>
+                    <div class="pop-card p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-700 mb-2">Step 1: Initiation at <code>oriC</code></h4>
+                        <p>Replication begins at a single, unique site called the <strong>origin of replication (<code>oriC</code>)</strong>. This site contains specific sequences: four 9-bp repeats and three 13-bp (AT-rich) repeats.
+                        <br><br>
+                        The <strong>DnaA protein</strong> (the initiator) binds to the 9-bp repeats, causing the DNA to wrap around the protein complex. This strain forces the AT-rich 13-bp repeats to open. <strong>DnaC</strong> (the loader) then escorts <strong>DnaB (Helicase)</strong> into this open bubble. Two helicases are loaded, one for each direction, forming two replication forks. This is called <strong>theta-replication</strong> because the structure resembles the Greek letter theta (&theta;).</p>
+                        <img src="https://placehold.co/700x300/cbe3f7/1d4ed8?text=Prokaryotic+Initiation+at+oriC" alt="Prokaryotic Initiation at oriC" class="mt-4">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Step 2: Elongation (The Fork)</h4>
+                            <p>As <strong>Helicase</strong> unwinds the DNA, <strong>DNA Gyrase</strong> works ahead to relieve supercoiling, and <strong>SSB proteins</strong> coat the single strands.
+                            <br><br>
+                            <strong>Leading Strand (Continuous):</strong> <strong>Primase</strong> makes *one* RNA primer. <strong>DNA Pol III</strong> (held by its sliding clamp) binds and synthesizes a new strand continuously towards the fork.
+                            <br><br>
+                            <strong>Lagging Strand (Discontinuous):</strong> This strand runs the wrong way. The <strong>Primosome (PriA + Primase)</strong> must make a *new* RNA primer every 1000-2000 bases. <strong>DNA Pol III</strong> then synthesizes a short piece, an <strong>Okazaki fragment</strong>, until it hits the next primer. The Pol III complex then detaches and re-loads at the newest primer.</p>
+                            <img src="https://study.com/cimages/videopreview/videopreview-full/screen_shot_2016-02-27_at_4.01.31_pm_115083.jpg" alt="DNA Replication Fork Diagram"
+                                 onerror="this.src='https://placehold.co/600x400/cbe3f7/1d4ed8?text=DNA+Replication+Fork'">
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Step 3: Completing the Lagging Strand</h4>
+                            <p>After the fork passes, the lagging strand is a mess of DNA fragments and RNA primers.
+                            <br><br>
+                            1. <strong>RNase H</strong> removes most of the RNA primer.
+                            <br>
+                            2. <strong>DNA Polymerase I</strong> binds to the nick. Its 5'→3' exonuclease activity removes the rest of the RNA primer, while its 5'→3' polymerase activity fills the gap with DNA.
+                            <br>
+                            3. <strong>DNA Ligase</strong> seals the final phosphate-sugar bond (the "nick"), joining the fragments into a single, complete strand.
+                            </p>
+                            <img src="https://image.slidesharecdn.com/1-dnareplicationnew-220828224203-c212eb39/75/DNA-replication-pptx-19-2048.jpg" alt="Okazaki fragment processing" class="mt-4"
+                                 onerror="this.src='https://placehold.co/700x350/cbe3f7/1d4ed8?text=Okazaki+fragment+processing'">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Part 3: Control of Initiation & Termination</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Control: DNA Methylation</h4>
+                            <p>How does the cell prevent re-replication? By using DNA methylation.
+                            <br><br>
+                            The <strong>Dam methylase</strong> adds methyl groups to the 'A' in all <code>GATC</code> sequences. After replication, the old strand is methylated, but the new strand is not. This is <strong>hemi-methylated</strong> DNA.
+                            <br><br>
+                            The hemi-methylated <code>oriC</code> is "sequestered" by the <strong>SeqA protein</strong>, which binds it to the cell membrane. This physically hides the origin, preventing DnaA from binding again until the Dam methylase can catch up and fully methylate the new strand.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Termination & Decatenation</h4>
+                            <p>The two forks move in opposite directions and meet at the <strong>terminus region</strong>. This region contains <strong>Ter sites</strong>.
+                            <br><br>
+                            The <strong>Tus protein</strong> binds to the Ter sites and acts as a one-way gate, stopping the helicase from one direction but allowing the other to arrive.
+                            <br><br>
+                            The two new circular chromosomes are often linked like rings in a chain (catenated). <strong>Topoisomerase IV</strong> cuts one chromosome, passes the other through the break, and reseals it to separate them (<strong>decatenation</strong>).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 scroll-animate" id="eukaryotic-replication">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Eukaryotic Replication: The Human Model
+                    </h2>
+                    <p class="text-center max-w-3xl mx-auto mb-12">Eukaryotic replication follows the same core principles (semi-conservative, 5'→3' synthesis, leading/lagging strands) but is more complex. It solves two main problems: <strong>Scale</strong> and <strong>Linear Ends</strong>.</p>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Part 1: The Eukaryotic Problems & Solutions</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Problem 1: Scale</h4>
+                            <p>Human chromosomes are enormous. Replicating from one origin would take weeks.
+                            <br><br>
+                            <strong>Solution: Multiple Origins of Replication.</strong> Eukaryotic chromosomes have 10,000 - 100,000 origins. Replication begins at all of them simultaneously, forming "replication bubbles" that grow and merge, rapidly copying the entire chromosome.</p>
+                            <img src="https://placehold.co/600x300/cbe3f7/1d4ed8?text=Eukaryotic+Multiple+Origins" alt="Eukaryotic Multiple Origins of Replication" class="mt-4">
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">Problem 2: Linear Ends</h4>
+                            <p>When the final RNA primer is removed from the 5' end of the lagging strand, DNA Pol I/&delta; cannot fill the gap (it needs a 3'-OH to add to). This is the <strong>End-Replication Problem</strong>, and it means the chromosome would get shorter with every division.
+                            <br><br>
+                            <strong>Solution: Telomeres & Telomerase.</strong>
+                            <br>
+                            <strong>Telomeres</strong> are long, repetitive DNA sequences (<code>TTAGGG</code> in humans) at the ends of chromosomes that act as a buffer.
+                            <br>
+                            <strong>Telomerase</strong> is a special enzyme (a reverse transcriptase) that carries its *own RNA template*. It binds to the 3' end and extends it by adding more <code>TTAGGG</code> repeats, allowing a new primer to be laid down to fill the gap.</p>
+                            <img src="https://placehold.co/600x300/cbe3f7/1d4ed8?text=End-Replication+Problem" alt="End-Replication Problem" class="mt-4">
+                            <img src="https://placehold.co/600x350/cbe3f7/1d4ed8?text=Telomerase+Extending+Telomere" alt="Telomerase extending telomeres" class="mt-4">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Part 2: The Eukaryotic Players (Key Differences)</h3>
+                    <div class="pop-card p-6 overflow-x-auto">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Function</th>
+                                    <th>Prokaryote (E. coli)</th>
+                                    <th>Eukaryote (Human)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Main "Builder"</td>
+                                    <td><strong>DNA Pol III</strong></td>
+                                    <td><strong>DNA Pol &delta; (delta)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Primer Synthesis</td>
+                                    <td><strong>Primase (DnaG)</strong></td>
+                                    <td><strong>DNA Pol &alpha; (alpha) / Primase</strong> (Pol &alpha; makes RNA primer *and* a short iDNA)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sliding Clamp</td>
+                                    <td><strong>&beta;-subunit (DnaN)</strong></td>
+                                    <td><strong>PCNA</strong> (Proliferating Cell Nuclear Antigen)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clamp Loader</td>
+                                    <td><strong>&gamma;-complex</strong></td>
+                                    <td><strong>Replication Factor C (RFC)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Primer Removal</td>
+                                    <td><strong>DNA Pol I</strong> (and RNase H)</td>
+                                    <td><strong>MF1 Exonuclease</strong> (and others)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Part 3: Control of Initiation (The Cell Cycle)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="pop-card p-6">
+                            <p>In eukaryotes, replication is strictly tied to the <strong>Cell Cycle</strong>.
+                            <br><br>
+                            * <strong>G1 Phase:</strong> The cell grows.
+                            <br>
+                            * <strong>S Phase:</strong> DNA synthesis (replication) occurs.
+                            <br>
+                            * <strong>G2 Phase:</strong> The cell prepares for division.
+                            <br>
+                            * <strong>M Phase:</strong> Mitosis (cell division) occurs.
+                            <br><br>
+                            To ensure origins fire <strong>"once and only once"</strong> per S-phase, a <strong>Replication Licensing Factor (RLF)</strong> binds to all origins during G1. When S-phase begins, the RLF is displaced or destroyed, preventing that origin from firing again until the *next* G1 phase.
+                            </p>
+                        </div>
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">The Process</h3>
-                            <p class="mb-4">DNA replication is <strong>semi-conservative</strong>, meaning each new DNA molecule contains one old strand and one new strand. This process occurs in two main stages at a Y-shaped structure called the <strong>replication fork</strong>.</p>
-                            <ul class="list-disc list-inside space-y-2 text-blue-800">
-                                <li><span class="font-bold text-gray-900">Strand Separation:</span> Unwinding the double helix.</li>
-                                <li><span class="font-bold text-gray-900">Synthesis:</span> Building two new complementary strands.</li>
-                            </ul>
-                        </div>
-                        <blockquote class="pop-card border-l-4 border-blue-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Key Concept: The Lagging Strand</h4>
-                            <p class="text-blue-900">DNA Polymerase can only build in the <strong>5' to 3' direction</strong>. This is fine for one strand (the <strong>leading strand</strong>), but the other strand (the <strong>lagging strand</strong>) must be synthesized backwards in small pieces called <strong>Okazaki fragments</strong>. These fragments are later stitched together by DNA ligase.</p>
-                        </blockquote>
-                    </div>
-
-                    <img src="https://image.slidesharecdn.com/1-dnareplicationnew-220828224203-c212eb39/75/DNA-replication-pptx-19-2048.jpg" alt="DNA Replication Enzymes" class="mt-12"
-                         onerror="this.src='https://placehold.co/700x350/cbe3f7/1d4ed8?text=DNA+Replication+Machinery'">
-                    <h3 class="text-3xl font-bold text-gray-900 mt-20 mb-8 text-center">The Replication Machinery</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        
-                        <!-- Enzyme Cards -->
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">DNA Helicase</h4>
-                            <p>The "Unzipper." It unwinds the DNA double helix by breaking hydrogen bonds, creating the replication fork.</p>
-                        </div>
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">DNA Gyrase (Topoisomerase)</h4>
-                            <p>The "Swivel." It relieves supercoiling and topological stress ahead of the helicase by cutting and resealing the DNA.</p>
-                        </div>
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">SSB Proteins</h4>
-                            <p>The "Shields." Single-Strand Binding proteins coat the separated strands to prevent them from re-annealing.</p>
-                        </div>
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">Primase (DnaG)</h4>
-                            <p>The "Ignition." It synthesizes short <strong>RNA primers</strong> because DNA Polymerase cannot start a new strand from scratch.</p>
-                        </div>
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">DNA Polymerase III (Pol III)</h4>
-                            <p>The "Builder." The main replication enzyme. It adds nucleotides in the 5' to 3' direction, using the template. It has proofreading ability.</p>
-                        </div>
-                        <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">DNA Polymerase I (Pol I)</h4>
-                            <p>The "Cleanup Crew." It removes the RNA primers from the lagging strand and replaces them with DNA.</p>
-                        </div>
-                        <div class="pop-card p-6 md:col-span-2 lg:col-span-1">
-                            <h4 class="text-xl font-bold text-blue-700 mb-2">DNA Ligase</h4>
-                            <p>The "Glue." It joins the Okazaki fragments on the lagging strand by sealing the nicks in the sugar-phosphate backbone.</p>
+                            <img src="https://placehold.co/600x400/cbe3f7/1d4ed8?text=Eukaryotic+Cell+Cycle" alt="Eukaryotic Cell Cycle" class="mt-4">
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                        <blockquote class="mt-8 pop-card border-l-4 border-gray-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Tidbit: Eukaryotic vs. Prokaryotic</h4>
-                            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li><strong>Prokaryotic Initiation:</strong> Bacteria (like <em>E. coli</em>) have one <strong>origin of replication (`oriC`)</strong>, where the <strong>DnaA protein</strong> binds to start the process.</li>
-                                <li><strong>Eukaryotic Initiation:</strong> Eukaryotes have <strong>multiple origins</strong> to replicate their much larger genomes quickly.</li>
-                                <li><strong>Eukaryotic Enzymes:</strong> Eukaryotes use different polymerases (Pol &alpha; for priming, Pol &delta; for elongation) and a sliding clamp called <strong>PCNA</strong>.</li>
-                                <li><strong>Eukaryotic Ends:</strong> Eukaryotes have linear chromosomes and use <strong>Telomerase</strong> to maintain the ends (telomeres) and prevent shortening.</li>
-                            </ul>
-                        </blockquote>
-                        <blockquote class="mt-8 pop-card border-l-4 border-yellow-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Pro-Tip: Building the Blocks</h4>
-                            <p class="text-yellow-900">Where do dATP, dGTP, dCTP, and dTTP come from? The cell makes them from their RNA counterparts (ADP, GDP, CDP, UDP) using an enzyme called <strong>Ribonucleotide Reductase</strong>. This enzyme is a key checkpoint for controlling cell division.</p>
-                        </blockquote>
-                        <blockquote class="mt-8 pop-card border-l-4 border-yellow-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Pro-Tip: Termination & Untangling</h4>
-                            <p class="text-yellow-900">In bacteria, replication forks are stopped at <strong>Terminator sites (`terC`)</strong> by the <strong>Tus protein</strong>. The two new circular chromosomes are often interlinked (catenated). <strong>Topoisomerase IV</strong> acts like a molecular magician, cutting one circle, passing the other through, and resealing it to separate them.</p>
-                        </blockquote>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 scroll-animate" id="replication-concepts">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Replication: Exam Prep & Core Concepts
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-blue-700 mb-2">The Concept of the Replicon</h4>
+                            <p>A <strong>replicon</strong> is any piece of DNA that can replicate itself. It *must* contain an <strong>origin of replication</strong>.
+                            <br><br>
+                            * A bacterial chromosome is a single replicon.
+                            * A eukaryotic chromosome contains *many* replicons.
+                            * Plasmids and many viruses are also replicons.
+                            <br><br>
+                            In bacteria, replicons are usually circular. This is because linear DNA is seen as "broken" and is rapidly destroyed by cellular enzymes called <strong>exonucleases</strong>.</p>
+                        </div>
+                        <div class="pop-card p-6 border-l-4 border-yellow-400">
+                            <h4 class="text-xl font-bold text-yellow-800 mb-2">Supplying the dNTPs (Precursors)</h4>
+                            <p>The "bricks" for DNA (dATP, dGTP, dCTP, dTTP) are made from the "bricks" for RNA (ADP, GDP, CDP, UDP) by the enzyme <strong>Ribonucleotide Reductase</strong>.
+                            <br><br>
+                            To make Thymine (dTTP), <strong>Thymidylate Synthetase</strong> adds a methyl group to dUMP. This reaction requires <strong>Tetrahydrofolate (THF)</strong>.
+                            <br><br>
+                            <strong>Clinical Targets (Exam Gold):</strong>
+                            <br>
+                            * <strong>Sulfonamides:</strong> Antibiotics that block folate *synthesis* in bacteria.
+                            <br>
+                            * <strong>Trimethoprim:</strong> Antibiotic that blocks Dihydrofolate Reductase (recycles THF) in *bacteria*.
+                            <br>
+                            * <strong>Methotrexate:</strong> Chemo drug that blocks Dihydrofolate Reductase in *humans* to stop cancer cell replication.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: PCR -->
+        <!-- 
+        ========================================================================
+        PCR SECTION
+        ========================================================================
+        -->
         <section class="py-16 scroll-animate" id="pcr">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
@@ -364,206 +597,461 @@
             </div>
         </section>
 
-        <!-- Section 3: Transcription -->
+        <!-- 
+        ========================================================================
+        NEW, EXPANDED TRANSCRIPTION & PTM SECTIONS
+        ========================================================================
+        -->
         <section class="py-16 scroll-animate" id="transcription">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        3. Transcription
+                        3. Transcription: A Deep Dive
                     </h2>
                     <p class="text-xl text-purple-700 text-center mb-16">
                         Reading the Blueprint (DNA to RNA)
                     </p>
-
-                    <blockquote class="pop-card border-l-4 border-purple-400 p-6 max-w-4xl mx-auto mb-12">
-                        <h4 class="font-bold text-lg text-gray-900 mb-2">Replication vs. Transcription</h4>
-                        <p class="text-purple-900">While replication copies the *entire* genome, transcription is <strong>selective</strong>. It copies only specific genes or groups of genes into RNA. It uses <strong>RNA Polymerase</strong>, doesn't need a primer, and uses Uracil (U) instead of Thymine (T).</p>
-                    </blockquote>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <blockquote class="pop-card border-l-4 border-purple-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Key Concept: Template vs. Coding Strand</h4>
-                            <p class="text-purple-900">RNA Polymerase "reads" the <strong>template strand</strong> (3' to 5') to build the new RNA. The other DNA strand, the <strong>coding strand</strong>, is not read, but its sequence (with T changed to U) will perfectly match the new RNA.</p>
-                        </blockquote>
-                        <blockquote class="pop-card border-l-4 border-purple-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Key Concept: The RNA Family</h4>
-                            <ul class="list-disc list-inside text-purple-900 space-y-1">
-                                <li><strong>mRNA (Messenger):</strong> The "instructions" that get translated into protein. (5-10%)</li>
-                                <li><strong>tRNA (Transfer):</strong> The "adaptor" that carries amino acids to the ribosome. (10-20%)</li>
-                                <li><strong>rRNA (Ribosomal):</strong> The "factory" component; forms the core of the ribosome. (60-80%)</li>
-                            </ul>
-                        </blockquote>
+                    <div class="pop-card p-6 overflow-x-auto mb-12">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Replication vs. Transcription: Key Differences</h3>
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Replication</th>
+                                    <th>Transcription</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Template</td>
+                                    <td><strong>Both</strong> DNA strands</td>
+                                    <td><strong>One</strong> DNA strand (Template strand)</td>
+                                </tr>
+                                <tr>
+                                    <td>Product</td>
+                                    <td>dsDNA (entire genome)</td>
+                                    <td>ssRNA (specific genes)</td>
+                                </tr>
+                                <tr>
+                                    <td>Enzyme</td>
+                                    <td>DNA Polymerase III</td>
+                                    <td>RNA Polymerase</td>
+                                </tr>
+                                <tr>
+                                    <td>Primer</td>
+                                    <td><strong>Yes</strong> (RNA primer)</td>
+                                    <td><strong>No</strong> (RNAP can start de novo)</td>
+                                </tr>
+                                <tr>
+                                    <td>Building Blocks</td>
+                                    <td>dATP, dGTP, dCTP, <strong>d</strong>TTP</td>
+                                    <td>ATP, GTP, CTP, <strong>U</strong>TP</td>
+                                </tr>
+                                <tr>
+                                    <td>Proofreading</td>
+                                    <td><strong>Yes</strong> (3'→5' exonuclease)</td>
+                                    <td><strong>No</strong> (Higher error rate)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    
-                    <!-- DELETED THE DUPLICATE IMAGE THAT WAS HERE -->
 
-                    <h3 class="text-3xl font-bold text-gray-900 mt-16 mb-8 text-center">Prokaryotic Transcription: A 3-Step Process</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAqIg1aoteR9vmPICkRfRmH01ySjFeDt2qw&s" alt="Prokaryotic Transcription Steps"
-                         onerror="this.src='https://placehold.co/800x250/c1bdfc/4c1d95?text=Initiation+%E2%86%92+Elongation+%E2%86%92+Termination'">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <!-- Step Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                         <div class="pop-card p-6">
-                            <div class="text-3xl mb-4">1.</div>
-                            <h4 class="text-xl font-bold text-purple-700 mb-2">Initiation</h4>
-                            <p class="text-sm">The <strong>RNA Polymerase holoenzyme</strong> (core enzyme + <strong>sigma factor</strong>) binds to a <strong>promoter</strong> region on the DNA (at the -10 "Pribnow box" and -35 sequences) and unwinds it.</p>
-                        </div>
-                        <div class="pop-card p-6 delay-100">
-                            <div class="text-3xl mb-4">2.</div>
-                            <h4 class="text-xl font-bold text-purple-700 mb-2">Elongation</h4>
-                            <p class="text-sm">The sigma factor releases, and the core enzyme moves along the template strand, synthesizing a complementary RNA strand in the 5' to 3' direction.</p>
-                        </div>
-                        <div class="pop-card p-6 delay-200">
-                            <div class="text-3xl mb-4">3.</div>
-                            <h4 class="text-xl font-bold text-purple-700 mb-2">Termination</h4>
-                            <p class="text-sm">Synthesis stops at a terminator signal. This can be <strong>Rho-independent</strong> (an RNA hairpin loop) or <strong>Rho-dependent</strong> (a protein factor that pushes the polymerase off).</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-3xl font-bold text-gray-900 mt-20 mb-8 text-center">Eukaryotic Upgrades</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div>
-                            <h4 class="text-2xl font-semibold text-gray-900 mb-4">More Complexity, More Control</h4>
-                            <ul class="list-disc list-inside space-y-3 text-purple-800">
-                                <li><span class="font-bold text-gray-900">Multiple Polymerases:</span> Eukaryotes use three (Pol I for rRNA, <strong>Pol II for mRNA</strong>, Pol III for tRNA).</li>
-                                <li><span class="font-bold text-gray-900">Transcription Factors:</span> Pol II requires many <strong>general transcription factors</strong> (like TFIIs) to bind the <strong>TATA box</strong> promoter.</li>
-                                <li><span class="font-bold text-gray-900">Regulation:</span> Gene expression is controlled by <strong>enhancers</strong> and <strong>silencers</strong>, DNA sequences that can be thousands of bases away from the gene.</li>
-                                <li><span class="font-bold text-gray-900">Cistrons:</span> Eukaryotic mRNA is <strong>monocistronic</strong> (one gene per mRNA). Prokaryotic mRNA is often <strong>polycistronic</strong> (multiple genes per mRNA).</li>
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">Core Concept: The RNA Family</h4>
+                            <p>Not all RNA is destined to become protein. There are three main types:</p>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li><strong>mRNA (Messenger):</strong> The "instructions" that get translated (5-10%).</li>
+                                <li><strong>tRNA (Transfer):</strong> The "adaptor" that carries amino acids (10-20%).</li>
+                                <li><strong>rRNA (Ribosomal):</strong> The "factory" component; part of the ribosome (60-80%).</li>
                             </ul>
                         </div>
-                        <div>
-                            <h4 class="text-2xl font-semibold text-gray-900 mb-4">Post-Transcriptional Modification</h4>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzUlN0McgmE1euhvfoKrxdPud_q-uMOTdCqw&s" alt="Eukaryotic RNA Splicing" class="mb-6"
-                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=Eukaryotic+RNA+Splicing'">
-                            <p class="mb-4">In eukaryotes, the initial "primary transcript" (hnRNA) must be processed before it can leave the nucleus:</p>
-                            <ul class="list-disc list-inside space-y-3 text-purple-800">
-                                <li><span class="font-bold text-gray-900">5' Capping:</span> A special 7-methylguanosine cap is added to the 5' end for protection and ribosome recognition.</li>
-                                <li><span class="font-bold text-gray-900">3' Poly(A) Tail:</span> A long chain of adenine bases is added to the 3' end for stability.</li>
-                                <li><span class="font-bold text-gray-900">Splicing:</span> Non-coding regions (<strong>introns</strong>) are removed, and coding regions (<strong>exons</strong>) are joined together by a complex called the <strong>spliceosome</strong>.</li>
-                            </ul>
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">Core Concept: Template vs. Coding</h4>
+                            <p>RNA Polymerase reads the <strong>Template Strand</strong> (3'→5') to synthesize a new RNA strand (5'→3'). The other DNA strand, the <strong>Coding Strand</strong>, has the *same* sequence as the new RNA (just with T instead of U).</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">Core Concept: Cistrons</h4>
+                            <p>A "cistron" is a gene. Prokaryotic mRNA is often <strong>polycistronic</strong> (one mRNA has instructions for several proteins). Eukaryotic mRNA is <strong>monocistronic</strong> (one mRNA = one protein).</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4.A: tRNA Charging -->
-        <section class="py-16 scroll-animate" id="charging">
+        <section class="py-16 scroll-animate" id="prokaryotic-transcription">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
-                    <h2 class="text-3xl font-bold text-center mb-4 text-pink-700">
-                        Preparation: Charging the tRNA
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Prokaryotic Transcription
                     </h2>
-                    <p class="text-center max-w-3xl mx-auto mb-12">Before translation can even begin, the "adaptor" tRNA molecules must be loaded with their correct amino acids. This is a crucial, high-energy step.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRM3D67MB9yLEX_VZxwlAShJEwgGGICj6Ug&s" alt="tRNA Charging" class="mb-6"
-                                 onerror="this.src='https://placehold.co/500x400/f4d4ec/d00078?text=Image+Error'">
+                    <p class="text-center max-w-3xl mx-auto mb-12">In bacteria, transcription is a rapid process performed by a single, multi-part enzyme. It occurs in the cytoplasm, and translation can begin *before* transcription is even finished.</p>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Prokaryotic RNA Polymerase</h3>
+                    <p class="mb-4">The "Holoenzyme" is the complete, active enzyme. It has two parts:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="pop-card p-6">
+                            <strong>1. The Core Enzyme (&alpha;<sub>2</sub>&beta;&beta;'&omega;)</strong>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li><strong>&alpha; (alpha):</strong> Determines the DNA to be transcribed.</li>
+                                <li><strong>&beta; (beta):</strong> Catalyzes polymerization.</li>
+                                <li><strong>&beta;' (beta-prime):</strong> Binds & opens the DNA template.</li>
+                            </ul>
+                        </div>
+                        <div class="pop-card p-6">
+                            <strong>2. The &sigma; (Sigma) Factor</strong>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li>The "specificity" factor. It recognizes and binds to promoter sequences.</li>
+                                <li>Different &sigma;-factors recognize different promoters (e.g., heat shock genes).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">The Process - Step-by-Step</h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAqIg1aoteR9vmPICkRfRmH01ySjFeDt2qw&s" alt="Prokaryotic Transcription Steps" class="mb-6"
+                         onerror="this.src='https://placehold.co/800x250/c1bdfc/4c1d95?text=Prokaryotic+Transcription+Process'">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">1. Initiation</h4>
+                            <p>The <strong>Holoenzyme (with &sigma;-factor)</strong> scans the DNA until the &sigma;-factor recognizes a <strong>promoter</strong>. Promoters have two key consensus sequences: the <strong>-10 sequence (Pribnow box)</strong> and the <strong>-35 sequence</strong>.
+                            <br><br>
+                            The enzyme first binds to form a <strong>closed complex</strong>. It then unwinds the DNA at the -10 box to form an <strong>open complex</strong>, creating the "transcription bubble."</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">2. Elongation</h4>
+                            <p>After synthesizing about 10 RNA bases, the &sigma;-factor is released (<strong>promoter clearance</strong>). The <strong>Core Enzyme</strong> now moves along the template strand, synthesizing RNA in a 5'→3' direction, maintaining an 8-bp RNA-DNA hybrid inside the bubble.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">3. Termination</h4>
+                            <p>The enzyme stops at a terminator signal. There are two types:</p>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li><strong>Rho-independent:</strong> The RNA forms a G-C rich <strong>hairpin loop</strong>, followed by a weak poly-U tail. This structure stalls the polymerase and pulls the RNA out.</li>
+                                <li><strong>Rho-dependent:</strong> A "Rho" protein (an ATP-dependent helicase) binds to the new RNA, travels up to the stalled polymerase, and unwinds the RNA-DNA hybrid, kicking the polymerase off.</li>
+                            </ul>
+                            <img src="https://placehold.co/400x200/c1bdfc/4c1d95?text=Rho-Independent+Hairpin" alt="Rho-Independent Termination" class="mt-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 scroll-animate" id="eukaryotic-transcription">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Eukaryotic Transcription
+                    </h2>
+                    <p class="text-center max-w-3xl mx-auto mb-12">Eukaryotic transcription is far more complex. It happens in the <strong>nucleus</strong>, and the product (hnRNA) must be heavily modified before it can be exported to the cytoplasm for translation.</p>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Eukaryotic RNA Polymerases</h3>
+                    <div class="pop-card p-6 overflow-x-auto mb-12">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Polymerase</th>
+                                    <th>Location</th>
+                                    <th>Product</th>
+                                    <th>Sensitivity to &alpha;-Amanitin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>RNA Pol I</strong></td>
+                                    <td>Nucleolus</td>
+                                    <td>Large rRNAs (28S, 18S, 5.8S)</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RNA Pol II</strong></td>
+                                    <td>Nucleoplasm</td>
+                                    <td><strong>mRNA</strong>, snRNA</td>
+                                    <td><strong>High</strong> (This is the "death cap" toxin!)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RNA Pol III</strong></td>
+                                    <td>Nucleoplasm</td>
+                                    <td>tRNA, 5S rRNA</td>
+                                    <td>Moderate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">The Process: Initiation with Pol II</h3>
+                    <p class="mb-4">RNA Pol II (which makes mRNA) cannot bind to DNA on its own. It requires a team of <strong>General Transcription Factors (TFs)</strong>.</p>
+                    <img src="https://placehold.co/700x300/c1bdfc/4c1d95?text=Eukaryotic+Promoter+Complex" alt="Eukaryotic Promoter" class="mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">Promoters & Factors</h4>
+                            <p>The <strong>core promoter</strong> contains a <strong>TATA box</strong> (around -25) and an Initiator element.
+                            <br><br>
+                            The process begins when TFs (like <strong>TFIID</strong>) bind to the TATA box. This recruits other factors and finally <strong>RNA Pol II</strong> itself, forming a massive <strong>pre-initiation complex</strong>.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">Enhancers & Silencers</h4>
+                            <p>Gene expression is controlled by DNA sequences that can be thousands of bases away.
+                            <br><br>
+                            * <strong>Enhancers:</strong> Bind *activator* proteins to *increase* transcription.
+                            <br>
+                            * <strong>Silencers:</strong> Bind *repressor* proteins to *decrease* transcription.
+                            <br><br>
+                            These elements, through DNA looping, interact with the promoter complex to regulate the rate of initiation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ========================================================================
+        NEW, EXPANDED PTM SECTION
+        ========================================================================
+        -->
+        <section class="py-16 scroll-animate" id="ptm">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Post-Transcriptional Modification
+                    </h2>
+                    <p class="text-center max-w-3xl mx-auto mb-12">In eukaryotes, the initial "primary transcript" (or <strong>hnRNA</strong>) is not functional. It must undergo "RNA processing" in the nucleus to become a mature, stable mRNA ready for export.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">1. 5' Capping</h4>
+                            <p>An unusual <strong>7-methylguanosine</strong> cap is added to the 5' end of the RNA via a rare <strong>5'-to-5' triphosphate linkage</strong>. This cap is essential for:
+                            <br>
+                            * Protecting the mRNA from degradation.
+                            <br>
+                            * Helping the ribosome bind during translation.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">2. 3' Polyadenylation</h4>
+                            <p>The 3' end is cleaved, and an enzyme called <strong>Poly(A) Polymerase</strong> adds a long chain (40-200) of adenine bases, forming the <strong>Poly(A) Tail</strong>. This tail:
+                            <br>
+                            * Increases the stability of the mRNA.
+                            <br>
+                            * Is required for its export from the nucleus.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">3. RNA Splicing</h4>
+                            <p>Eukaryotic genes are "split." They contain coding regions (<strong>Exons</strong>) interrupted by non-coding regions (<strong>Introns</strong>).
+                            <br><br>
+                            The <strong>Spliceosome</strong>, a large complex made of <strong>snRNPs</strong> (small nuclear ribonucleoproteins), cuts out the introns and joins the exons together, forming a <strong>lariat</strong> structure from the removed intron.
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzUlN0McgmE1euhvfoKrxdPud_q-uMOTdCqw&s" alt="Eukaryotic RNA Splicing" class="mb-6"
+                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=Eukaryotic+RNA+Splicing'">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Processing of other RNAs</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">tRNA Modification</h4>
+                            <p>tRNA transcripts are also processed. This involves cleaving sequences from the 5' and 3' ends, (sometimes) splicing, and extensive <strong>base modification</strong> (e.g., methylation, reduction) to create the characteristic D and &Psi; loops.</p>
+                            <img src="https://placehold.co/500x300/c1bdfc/4c1d95?text=tRNA+Processing" alt="tRNA Processing" class="mt-4">
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-purple-700 mb-2">rRNA Modification</h4>
+                            <p>In the nucleolus, a large <strong>45S pre-rRNA</strong> transcript is synthesized by Pol I. This single transcript is then methylated and cleaved by nucleases into the final <strong>18S, 5.8S, and 28S</strong> rRNAs that form the core of the ribosome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ========================================================================
+        NEW, EXPANDED TRANSLATION SECTION
+        ========================================================================
+        -->
+        <section class="py-16 scroll-animate" id="translation">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
+                        4. Translation: A Deep Dive
+                    </h2>
+                    <p class="text-xl text-pink-700 text-center mb-16">
+                        Building the Machine (RNA to Protein)
+                    </p>
+                    <p class="text-center max-w-3xl mx-auto mb-12">Translation is the final, complex process of synthesizing a polypeptide (protein) from an mRNA template. This process is orchestrated by the <strong>ribosome</strong> and requires a team of helper molecules.</p>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Part 1: The "Tools" for Building</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">mRNA (Messenger RNA)</h4>
+                            <p>The "Instructions." Carries the genetic code in 3-letter <strong>codons</strong>.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">tRNA (Transfer RNA)</h4>
+                            <p>The "Adaptor." One end has an <strong>anticodon</strong> to read the codon; the other carries the correct <strong>amino acid</strong>.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">Ribosome (rRNA + Protein)</h4>
+                            <p>The "Factory." Has a large and small subunit, and three sites: <strong>A</strong> (Aminoacyl), <strong>P</strong> (Peptidyl), and <strong>E</strong> (Exit).</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Part 2: Preparing for Translation - Charging the tRNA</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">Aminoacyl-tRNA Synthetase</h4>
+                            <p>This enzyme is the *true* translator. It ensures the correct amino acid is attached to the correct tRNA. This two-step process uses ATP and is incredibly specific.</p>
+                            <ul class="list-disc list-inside space-y-2 text-pink-800">
+                                <li><strong>Step 1 (Activation):</strong> Amino Acid + ATP &rarr; Aminoacyl-AMP + PPi</li>
+                                <li><strong>Step 2 (Charging):</strong> Aminoacyl-AMP + tRNA &rarr; <strong>Aminoacyl-tRNA</strong> + AMP</li>
+                            </ul>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Aminoacyl-tRNA Synthetase</h3>
-                            <p class="mb-4">This is the *real* hero of translation. It's an enzyme that "reads" both an amino acid and a tRNA, ensuring a perfect match.</p>
-                            <ul class="list-disc list-inside space-y-2 text-pink-800">
-                                <li><strong>Step 1 (Activation):</strong> The enzyme uses ATP to attach an amino acid, creating a high-energy aminoacyl-AMP.</li>
-                                <li><strong>Step 2 (Charging):</strong> The enzyme transfers the amino acid to the 3' end of the correct tRNA, releasing AMP.</li>
-                                <li><strong>The Result:</strong> A "charged" aminoacyl-tRNA, ready for the ribosome.</li>
-                            </ul>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRM3D67MB9yLEX_VZxwlAShJEwgGGICj6Ug&s" alt="tRNA Charging"
+                                 onerror="this.src='https::placehold.co/500x400/f4d4ec/d00078?text=tRNA+Charging'">
+                        </div>
+                    </div>
+                    
+                    <div class="pop-card p-6 overflow-x-auto mb-12">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Prokaryotic vs. Eukaryotic Translation</h3>
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Prokaryote</th>
+                                    <th>Eukaryote</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ribosome</td>
+                                    <td><strong>70S</strong> (30S + 50S)</td>
+                                    <td><strong>80S</strong> (40S + 60S)</td>
+                                </tr>
+                                <tr>
+                                    <td>Initiation Signal</td>
+                                    <td><strong>Shine-Dalgarno Sequence</strong> (binds 16S rRNA)</td>
+                                    <td><strong>5' Cap</strong> (binds eIFs), scans for Kozak sequence</td>
+                                </tr>
+                                <tr>
+                                    <td>Initiator tRNA</td>
+                                    <td><strong>fMet-tRNA</strong> (Formylmethionine)</td>
+                                    <td><strong>Met-tRNA</strong> (Methionine)</td>
+                                </tr>
+                                <tr>
+                                    <td>Initiation Factors</td>
+                                    <td>IFs (IF1, IF2, IF3)</td>
+                                    <td>eIFs (many, e.g., eIF2, eIF4F)</td>
+                                </tr>
+                                <tr>
+                                    <td>Elongation Factors</td>
+                                    <td>EF-Tu, EF-G</td>
+                                    <td>eEF1, eEF2</td>
+                                </tr>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>Cytoplasm (coupled to transcription)</td>
+                                    <td>Cytoplasm (separated from transcription)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 scroll-animate" id="prokaryotic-translation">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Prokaryotic Translation: Step-by-Step
+                    </h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_GaoX9vQTFyWWgcbfEwqj-ULUG0B6TvyPg&s" alt="Ribosome translating mRNA"
+                         onerror="this.src='https://placehold.co/700x400/f4d4ec/d00078?text=Image+Error'">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12">
+                        <!-- Step Cards -->
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">1. Initiation</h4>
+                            <p>The <strong>30S (small) subunit</strong>, along with <strong>IF1</strong> and <strong>IF3</strong>, binds to the mRNA. The <strong>Shine-Dalgarno sequence</strong> on the mRNA base-pairs with the <strong>16S rRNA</strong> of the 30S subunit, perfectly positioning it.
+                            <br><br>
+                            <strong>IF2</strong> (bound to GTP) escorts the initiator <strong>fMet-tRNA</strong> to the <strong>P site</strong>. The <strong>50S (large) subunit</strong> joins, GTP is hydrolyzed, and all IFs are released. The 70S initiation complex is now ready.</p>
+                            <img src="https://placehold.co/400x300/f4d4ec/d00078?text=Prokaryotic+Initiation" alt="Prokaryotic Initiation" class="mt-4">
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">2. Elongation</h4>
+                            <p>This is a 3-step cycle, driven by GTP.
+                            <br><br>
+                            1. <strong>Binding:</strong> <strong>EF-Tu</strong> (with GTP) escorts the next charged tRNA to the <strong>A site</strong>.
+                            <br>
+                            2. <strong>Peptidyl Transfer:</strong> The <strong>23S rRNA</strong> (a <strong>Ribozyme</strong>!) in the large subunit catalyzes a peptide bond. The growing polypeptide is transferred from the P-site tRNA to the A-site tRNA.
+                            <br>
+                            3. <strong>Translocation:</strong> <strong>EF-G</strong> (with GTP) binds, causing the ribosome to shift one codon over. The now-empty tRNA moves to the <strong>E site</strong> and exits. The tRNA holding the polypeptide moves into the <strong>P site</strong>. The A site is now open for the next cycle.</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkb-V6eHaX8cO30z7OzaA7GNwPVgCcBw3Wvw&s" alt="Ribosome A P E sites diagram" class="mt-4"
+                                 onerror="this.src='https://placehold.co/600x200/f4d4ec/d00078?text=Image+Error'">
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">3. Termination</h4>
+                            <p>When a <strong>stop codon</strong> (UAA, UAG, or UGA) enters the A site, no tRNA matches.
+                            <br><br>
+                            Instead, a <strong>Release Factor (RF1 or RF2)</strong> binds. This causes the ribosome to transfer the polypeptide to a water molecule, releasing it.
+                            <br><br>
+                            <strong>RF3</strong> then causes the release factors and ribosome to dissociate, ready to start again.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Section 4.B: Translation -->
-        <section class="py-16 scroll-animate" id="translation">
+        <section class="py-16 scroll-animate" id="eukaryotic-translation">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
-                    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        4. Translation
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Eukaryotic Translation: Key Differences
                     </h2>
-                    <p class="text-xl text-pink-700 text-center mb-16">
-                        Building the Machine (RNA to Protein)
-                    </p>
-
-                    <p class="text-center max-w-3xl mx-auto mb-12">Translation is the final step, where the genetic code on the mRNA is read to synthesize a polypeptide (a protein). This entire process is orchestrated by the <strong>ribosome</strong>.</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_GaoX9vQTFyWWgcbfEwqj-ULUG0B6TvyPg&s" alt="Ribosome translating mRNA"
-                         onerror="this.src='https://placehold.co/700x400/f4d4ec/d00078?text=Image+Error'">
-                    
-                    <h3 class="text-3xl font-bold text-gray-900 mt-16 mb-8 text-center">The "Tools" for Building</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Tool Cards -->
+                    <img src="https://placehold.co/700x350/f4d4ec/d00078?text=Eukaryotic+Initiation+Scanning" alt="Eukaryotic Initiation" class="mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">mRNA (Messenger RNA)</h4>
-                            <p>The "Instructions." It carries the genetic code from the DNA in the form of three-letter "codons" (e.g., AUG, GUC, UAA).</p>
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">Initiation (The Main Difference)</h4>
+                            <p>Eukaryotes use an <strong>80S ribosome</strong> and *many* more initiation factors (<strong>eIFs</strong>).
+                            <br><br>
+                            The <strong>40S (small) subunit</strong> *first* binds the initiator <strong>Met-tRNA</strong> (escorted by <strong>eIF2</strong>). This complex is then recruited to the <strong>5' cap</strong> of the mRNA by other eIFs.
+                            <br><br>
+                            The entire complex then <strong>scans</strong> down the mRNA until it finds the first AUG in a good <strong>Kozak sequence</strong> (e.g., <code>CAAAAUG</code>). This is where the 60S subunit joins and translation begins.</p>
                         </div>
-                        <div class="pop-card p-6 delay-100">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">Charged tRNA (Transfer RNA)</h4>
-                            <p>The "Adaptor." One end has an <strong>anticodon</strong> that matches an mRNA codon. The other end carries its specific <strong>amino acid</strong>.</p>
-                        </div>
-                        <div class="pop-card p-6 delay-200">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">Ribosome (rRNA + Protein)</h4>
-                            <p>The "Factory." It has two subunits (large and small) and three sites: <strong>A (Aminoacyl)</strong>, <strong>P (Peptidyl)</strong>, and <strong>E (Exit)</strong>.</p>
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-3xl font-bold text-gray-900 mt-20 mb-8 text-center">The Ribosome Assembly Line</h3>
-                    <!-- Ribosome Animation -->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkb-V6eHaX8cO30z7OzaA7GNwPVgCcBw3Wvw&s" alt="Ribosome A P E sites diagram"
-                         onerror="this.src='https://placehold.co/600x200/f4d4ec/d00078?text=Image+Error'">
-                    <div class="pop-card p-8 max-w-3xl mx-auto">
-                        <div class="relative w-full h-32 bg-gray-200 rounded-lg flex items-center justify-between text-center overflow-hidden">
-                            <!-- E, P, A Sites -->
-                            <div class="w-1/3 h-full border-r border-gray-300/50 flex items-center justify-center">
-                                <span class="text-4xl font-bold text-gray-400">E</span>
-                            </div>
-                            <div class="w-1/3 h-full border-r border-gray-300/50 flex items-center justify-center">
-                                <span class="text-4xl font-bold text-gray-400">P</span>
-                            </div>
-                            <div class="w-1/3 h-full flex items-center justify-center">
-                                <span class="text-4xl font-bold text-gray-400">A</span>
-                            </div>
-                            <!-- Animated tRNA -->
-                            <div id="trna-animation"></div>
-                        </div>
-                        <div class="relative w-full h-6 bg-pink-500 rounded-b-lg mt-2 flex items-center justify-center">
-                            <span class="text-xs font-mono text-white tracking-widest">...AUG|GGC|UAC|...</span>
-                        </div>
-                        <p class="text-center text-sm text-gray-500 mt-2">mRNA strand</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12">
-                        <!-- Step Cards -->
                         <div class="pop-card p-6">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">1. Initiation</h4>
-                            <p>The small ribosomal subunit binds the mRNA. In prokaryotes, it finds the <strong>Shine-Dalgarno sequence</strong>. In eukaryotes, it scans from the <strong>5' cap</strong> for the <strong>Kozak sequence</strong>. The first tRNA (carrying fMet in prokaryotes, Met in eukaryotes) binds the <strong>start codon</strong> (AUG) in the P site, and the large subunit joins.</p>
-                        </div>
-                        <div classs="pop-card p-6 delay-100">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">2. Elongation</h4>
-                            <p>A new charged tRNA lands in the <strong>A site</strong>. The ribosome's 23S rRNA (a <strong>ribozyme</strong>) catalyzes a <strong>peptide bond</strong>, transferring the growing polypeptide from the P-site tRNA to the A-site tRNA. The ribosome then <strong>translocates</strong>, moving the tRNAs to the E and P sites.</p>
-                        </div>
-                        <div class="pop-card p-6 delay-200">
-                            <h4 class="text-xl font-bold text-pink-700 mb-2">3. Termination</h4>
-                            <p>When a <strong>stop codon</strong> (UAA, UAG, UGA) enters the A site, no tRNA matches. Instead, a <strong>release factor</strong> binds, causing the ribosome to add a water molecule to the polypeptide, freeing it. The ribosomal subunits and mRNA then dissociate.</p>
+                            <h4 class="text-xl font-bold text-pink-700 mb-2">Elongation & Termination</h4>
+                            <p>The process is nearly identical to prokaryotes, but the helper proteins have different names.
+                            <br><br>
+                            * <strong>Elongation:</strong> Uses <strong>eEF1</strong> (like EF-Tu) and <strong>eEF2</strong> (like EF-G).
+                            <br>
+                            * <strong>Termination:</strong> A single release factor, <strong>eRF1</strong>, recognizes all three stop codons.</p>
                         </div>
                     </div>
-
-                    <blockquote class="mt-16 pop-card border-l-4 border-red-400 p-6">
-                        <h4 class="font-bold text-lg text-gray-900 mb-2">Pro-Tip: Common Inhibitors</h4>
-                        <p class="text-red-800">These processes are common targets for antibiotics and toxins:</p>
-                        <ul class="list-disc list-inside text-sm mt-2">
-                            <li><strong>Rifampicin:</strong> (Antibiotic) Inhibits prokaryotic RNA polymerase.</li>
-                            <li><strong>&alpha;-Amanitin:</strong> (Mushroom Toxin) A deadly inhibitor of eukaryotic RNA Polymerase II.</li>
-                            <li><strong>Actinomycin D:</strong> Binds DNA and blocks the movement of RNA polymerase (inhibits transcription).</li>
-                        </ul>
-                    </blockquote>
-                    
-                    <blockquote class="mt-8 pop-card border-l-4 border-gray-400 p-6">
-                        <h4 class="font-bold text-lg text-gray-900 mb-2">Breaking the Dogma: Reverse Transcription</h4>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Hiv_gross.png/250px-Hiv_gross.png" alt="HIV Retrovirus Diagram" class="mb-4"
-                             onerror="this.src='https://placehold.co/600x300/dddddd/333333?text=Reverse+Transcription+(RNA+%E2%86%92+DNA)'">
-                        <p class="text-gray-700">The central dogma (DNA &rarr; RNA &rarr; Protein) is not absolute. Retroviruses (like HIV) use an enzyme called <strong>Reverse Transcriptase</strong> to synthesize DNA *from* an RNA template (RNA &rarr; DNA). This viral DNA can then integrate into the host's genome.</p>
-                    </blockquote>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+        ========================================================================
+        NEW, EXPANDED EXAM PREP SECTION
+        ========================================================================
+        -->
+        <section class="py-16 scroll-animate" id="exam-prep">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                        Exam Prep: Inhibitors & Key Concepts
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pop-card p-6 border-l-4 border-red-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-2">Inhibitors of Transcription</h4>
+                            <p class="text-red-800">These are classic exam questions:</p>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li><strong>Rifampicin:</strong> (Antibiotic) Binds to the &beta;-subunit of <strong>prokaryotic</strong> RNA Polymerase. Used to treat Tuberculosis.</li>
+                                <li><strong>Actinomycin D:</strong> Binds to DNA and blocks the movement of *all* RNA Polymerases (prokaryotic and eukaryotic). A research tool.</li>
+                                <li><strong>&alpha;-Amanitin:</strong> (From "Death Cap" mushrooms) A deadly toxin that inhibits <strong>eukaryotic RNA Polymerase II</strong>.</li>
+                            </ul>
+                        </div>
+                        <div class="pop-card p-6 border-l-4 border-gray-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-2">Breaking the Dogma: Reverse Transcription</h4>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Hiv_gross.png/250px-Hiv_gross.png" alt="HIV Retrovirus Diagram" class="mb-4"
+                                 onerror="this.src='https://placehold.co/600x300/dddddd/333333?text=Reverse+Transcription+(RNA+%E2%86%92+DNA)'">
+                            <p class="text-gray-700">The central dogma (DNA &rarr; RNA &rarr; Protein) is not absolute. Retroviruses (like HIV) use an enzyme called <strong>Reverse Transcriptase</strong> to synthesize DNA *from* an RNA template (RNA &rarr; DNA). This viral DNA can then integrate into the host's genome.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -588,7 +1076,6 @@
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // *** FIX: Changed 'isIntersectEcting' to 'isIntersecting' ***
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
                         observer.unobserve(entry.target); // Animate only once
@@ -611,23 +1098,22 @@
             let currentStep = 0;
 
             function animatePCR() {
-                // Check if the element is in the viewport before animating
                 const diagram = document.getElementById('pcr-diagram');
                 if (!diagram) return;
-                
                 const rect = diagram.getBoundingClientRect();
                 const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
 
                 if (isInViewport) {
-                    pcrSteps.forEach(step => step.classList.remove('active'));
-                    pcrSteps[currentStep].classList.add('active');
+                    pcrSteps.forEach(step => step && step.classList.remove('active'));
+                    if (pcrSteps[currentStep]) {
+                        pcrSteps[currentStep].classList.add('active');
+                    }
                     currentStep = (currentStep + 1) % pcrSteps.length;
                 }
             }
-            // Only start animation if the diagram exists
             if (pcrSteps[0]) {
-                setInterval(animatePCR, 2000); // Change step every 2 seconds
-                animatePCR(); // Start immediately
+                setInterval(animatePCR, 2000); 
+                animatePCR();
             }
 
             // --- Scroll-Spy for Navigation ---
@@ -636,16 +1122,27 @@
             
             const spyObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // *** FIX: Changed 'isIntersectEcting' to 'isIntersecting' ***
                     if (entry.isIntersecting) {
                         const id = entry.target.getAttribute('id');
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            // Match href for replication and pcr, but also for translation (which has charging)
-                            if (link.getAttribute('href') === `#${id}`) {
+                            const href = link.getAttribute('href');
+                            
+                            if (href === `#${id}`) {
                                 link.classList.add('active');
-                            } else if (id === 'charging' && link.getAttribute('href') === '#translation') {
-                                link.classList.add('active'); // Highlight "Translation" nav for "Charging" section
+                            } else if (id.includes('replication') && href === '#replication') {
+                                link.classList.add('active');
+                            } else if (id.includes('transcription') && href === '#transcription') {
+                                link.classList.add('active');
+                            } else if (id === 'ptm' && href === '#transcription') {
+                                link.classList.add('active');
+                            } else if (id.includes('translation') && href === '#translation') {
+                                link.classList.add('active');
+                            } else if (id === 'charging' && href === '#translation') {
+                                link.classList.add('active');
+                            } else if (id === 'exam-prep' && window.scrollY > (document.body.scrollHeight - window.innerHeight - 200)) {
+                                // Special case for last items, highlight based on context
+                                if (href === '#translation') link.classList.add('active');
                             }
                         });
                     }
@@ -656,7 +1153,7 @@
             });
 
             sections.forEach(section => {
-                observer.observe(section);
+                spyObserver.observe(section);
             });
 
         });
