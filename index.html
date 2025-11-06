@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Central Dogma: Uncoded</title>
+    <title>The Central Dogma: Study Guide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom Styles and Animations -->
@@ -177,9 +177,10 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-xl font-bold text-gray-900">The Central <span class="text-blue-700">Dogma</span></h1>
             <div class="space-x-6 text-sm font-semibold hidden md:block">
+                <a href="#introduction" class="text-gray-700 hover:text-black transition-colors">Introduction</a>
                 <a href="#replication" class="text-gray-700 hover:text-black transition-colors">Replication</a>
-                <a href="#pcr" class="text-gray-700 hover:text-black transition-colors">PCR</a>
                 <a href="#transcription" class="text-gray-700 hover:text-black transition-colors">Transcription</a>
+                <a href="#pcr" class="text-gray-700 hover:text-black transition-colors">PCR</a>
                 <a href="#translation" class="text-gray-700 hover:text-black transition-colors">Translation</a>
             </div>
         </div>
@@ -216,6 +217,64 @@
 
         <!-- 
         ========================================================================
+        NEW "INTRODUCTION" SECTION
+        ========================================================================
+        -->
+        <section class="py-16 scroll-animate" id="introduction">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
+                        1. Introduction to Molecular Biology
+                    </h2>
+                    <p class="text-xl text-gray-700 text-center mb-16">
+                        The Language, Molecules, and Core Concepts of Life
+                    </p>
+                    
+                    <div class="pop-card p-6 mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">What is Molecular Biology?</h3>
+                        <p>Molecular Biology is the field of study focused on the molecular basis of biological activity. It seeks to understand the interactions between the various systems of a cell, including the relationships between **DNA**, **RNA**, and **protein** synthesis, and learning how these interactions are regulated.</p>
+                        <p class="mt-2">The **Central Dogma**, "DNA makes RNA, and RNA makes protein," is the foundational principle of this field.</p>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Key Terminologies (from <code>transcription.pptx</code>)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">Cistron vs. ORF</h4>
+                            <ul class="list-disc list-inside text-sm mt-2 space-y-2">
+                                <li><strong>Cistron:</strong> A structural gene. This is a segment of DNA that encodes a functional product, which can be either a polypeptide (protein) or a functional RNA molecule (like tRNA or rRNA).</li>
+                                <li><strong>ORF (Open Reading Frame):</strong> Any sequence of DNA or RNA that *could* theoretically encode a protein. It's a continuous stretch of codons that begins with a start codon and ends at a stop codon.</li>
+                            </ul>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">Gene Organization</h4>
+                            <ul class="list-disc list-inside text-sm mt-2 space-y-2">
+                                <li><strong>Monocistronic mRNA:</strong> (Common in Eukaryotes) One mRNA molecule contains the genetic information to translate only a *single* protein.</li>
+                                <li><strong>Polycistronic mRNA:</strong> (Common in Prokaryotes) One mRNA molecule encodes *several* different proteins, one after another.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">The Key Molecules: The RNA Family</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">mRNA (Messenger RNA)</h4>
+                            <p class="text-sm">The "Instructions" (5-10% of total RNA). It carries the genetic code from the DNA in the nucleus to the ribosome in the cytoplasm, where it serves as the template for protein synthesis.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">tRNA (Transfer RNA)</h4>
+                            <p class="text-sm">The "Adaptor" (10-20% of total RNA). It "reads" the codons on the mRNA and brings the correct, specific amino acid to the ribosome to build the protein chain.</p>
+                        </div>
+                        <div class="pop-card p-6">
+                            <h4 class="font-bold text-lg text-purple-700 mb-2">rRNA (Ribosomal RNA)</h4>
+                            <p class="text-sm">The "Factory" (60-80% of total RNA). This is the main structural and catalytic component of the ribosome, the machine responsible for all protein synthesis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ========================================================================
         REPLICATION SECTION
         ========================================================================
         -->
@@ -223,7 +282,7 @@
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        1. DNA Replication: A Deep Dive
+                        2. DNA Replication: A Deep Dive
                     </h2>
                     <p class="text-xl text-blue-700 text-center mb-16">
                         Copying the Master Blueprint for Exam Preparation
@@ -331,7 +390,8 @@
                         The <strong>DnaA protein</strong> (the initiator) binds to the 9-bp repeats, causing the DNA to wrap around the protein complex. This strain forces the AT-rich 13-bp repeats to open. <strong>DnaC</strong> (the loader) then escorts <strong>DnaB (Helicase)</strong> into this open bubble. Two helicases are loaded, one for each direction, forming two replication forks. This is called <strong>theta-replication</strong> because the structure resembles the Greek letter theta (&theta;).</p>
                         <img src="https://placehold.co/700x300/cbe3f7/1d4ed8?text=Prokaryotic+Initiation+at+oriC" alt="Prokaryotic Initiation at oriC" class="mt-4">
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-blue-700 mb-2">Step 2: Elongation (The Fork)</h4>
                             <p>As <strong>Helicase</strong> unwinds the DNA, <strong>DNA Gyrase</strong> works ahead to relieve supercoiling, and <strong>SSB proteins</strong> coat the single strands.
@@ -386,7 +446,8 @@
                     </h2>
                     <p class="text-center max-w-3xl mx-auto mb-12">Eukaryotic replication follows the same core principles (semi-conservative, 5'→3' synthesis, leading/lagging strands) but is more complex. It solves two main problems: <strong>Scale</strong> and <strong>Linear Ends</strong>.</p>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-6">Part 1: The Eukaryotic Problems & Solutions</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-blue-700 mb-2">Problem 1: Scale</h4>
                             <p>Human chromosomes are enormous. Replicating from one origin would take weeks.
@@ -468,7 +529,8 @@
                     <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
                         Replication: Exam Prep & Core Concepts
                     </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-blue-700 mb-2">The Concept of the Replicon</h4>
                             <p>A <strong>replicon</strong> is any piece of DNA that can replicate itself. It *must* contain an <strong>origin of replication</strong>.
@@ -493,103 +555,6 @@
                             <br>
                             * <strong>Methotrexate:</strong> Chemo drug that blocks Dihydrofolate Reductase in *humans* to stop cancer cell replication.
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 
-        ========================================================================
-        PCR SECTION
-        ========================================================================
-        -->
-        <section class="py-16 scroll-animate" id="pcr">
-            <div class="container mx-auto px-6">
-                <div class="glass-card p-8 md:p-12">
-                    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        2. PCR (Polymerase Chain Reaction)
-                    </h2>
-                    <p class="text-xl text-purple-700 text-center mb-16">
-                        Replication in a Test Tube
-                    </p>
-
-                    <p class="text-center max-w-3xl mx-auto mb-12">Developed by Kary Mullis in 1983, PCR is a technique to amplify a specific segment of DNA exponentially, creating millions of copies from just a few. It mimics DNA replication but uses temperature cycles to control the process.</p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- PCR Ingredients -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">The "Recipe" (Components)</h3>
-                            <img src="https://microbenotes.com/wp-content/uploads/2022/07/Components-of-PCR-Enzymes-used-in-PCR.jpg" alt="PCR Components in a tube" class="mb-6"
-                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=PCR+Components'">
-                            <div class="space-y-4">
-                                <div class="pop-card p-4">
-                                    <h4 class="font-bold text-purple-700">DNA Template</h4>
-                                    <p class="text-sm">The source DNA containing the target sequence to be amplified.</p>
-                                </div>
-                                <div class="pop-card p-4">
-                                    <h4 class="font-bold text-purple-700">DNA Polymerase</h4>
-                                    <p class="text-sm">A heat-stable enzyme. <strong>Taq polymerase</strong> is common, but <strong>Pfu polymerase</strong> is used for high-fidelity (fewer errors) applications.</p>
-                                </div>
-                                <div class="pop-card p-4">
-                                    <h4 class="font-bold text-purple-700">Primers (Forward & Reverse)</h4>
-                                    <p class="text-sm">Short, synthetic DNA strands that define the start and end of the target sequence. They are complementary to the 3' ends of the target.</p>
-                                </div>
-                                <div class="pop-card p-4">
-                                    <h4 class="font-bold text-purple-700">dNTPs (Nucleotides)</h4>
-                                    <p class="text-sm">The building blocks (A, T, C, G) for the new DNA strands.</p>
-                                </div>
-                                <div class="pop-card p-4">
-                                    <h4 class="font-bold text-purple-700">Buffer with Mg<sup>2+</sup></h4>
-                                    <p class="text-sm">Provides the optimal chemical environment. Mg<sup>2+</sup> is a crucial co-factor for the polymerase.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- PCR Cycle Animation -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">The "Program" (The Cycle)</h3>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqSI6dBUmW8cYL8Lg954zl4fJWKCdYmKFt5A&s" alt="PCR Cycle Steps" class="mb-6"
-                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=PCR+Cycle+Steps'">
-                            <div id="pcr-diagram" class="bg-white/50 p-6 rounded-xl shadow-inner">
-                                <!-- Step 1 -->
-                                <div id="pcr-step-1" class="pcr-step rounded-lg p-4 mb-4">
-                                    <h4 class="text-xl font-bold text-red-600">1. Denaturation (~94°C)</h4>
-                                    <p>The mixture is heated to separate the double-stranded DNA into two single strands.</p>
-                                </div>
-                                <!-- Step 2 -->
-                                <div id="pcr-step-2" class="pcr-step rounded-lg p-4 mb-4">
-                                    <h4 class="text-xl font-bold text-blue-600">2. Annealing (~54°C)</h4>
-                                    <p>The temperature is lowered, allowing the primers to hybridize (bind) to their complementary sequences on the single strands.</p>
-                                </div>
-                                <!-- Step 3 -->
-                                <div id="pcr-step-3" class="pcr-step rounded-lg p-4">
-                                    <h4 class="text-xl font-bold text-green-600">3. Extension (~72°C)</h4>
-                                    <p>The temperature is raised to the optimal level for Taq polymerase, which adds dNTPs to extend the primers and synthesize new strands.</p>
-                                </div>
-                            </div>
-                            <p class="text-center mt-4 text-gray-700">This cycle is repeated 30-40 times, resulting in an <strong>exponential amplification</strong> (2<sup>n</sup>) of the target DNA.</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-3xl font-bold text-gray-900 mt-20 mb-8 text-center">PCR: Pro-Tips & Applications</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <blockquote class="pop-card border-l-4 border-yellow-400 p-6">
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Pro-Tip: Designing Perfect Primers</h4>
-                            <p class="text-yellow-900">A successful PCR depends on good primers. They should be:</p>
-                            <ul class="list-disc list-inside text-sm mt-2">
-                                <li><strong>Specific Length:</strong> Typically 18-25 nucleotides.</li>
-                                <li><strong>Balanced:</strong> About 40-60% GC content (Guanine/Cytosine) for good binding.</li>
-                                <li><strong>Not Self-Complementary:</strong> Must avoid binding to themselves (hairpins) or each other (primer-dimers).</li>
-                            </ul>
-                        </blockquote>
-                        <div>
-                            <h4 class="font-bold text-lg text-gray-900 mb-2">Common Applications</h4>
-                            <div class="space-y-3">
-                                <div class="pop-card p-4 text-sm"><strong>Forensics:</strong> Amplifying tiny DNA samples from a crime scene for identification.</div>
-                                <div class="pop-card p-4 text-sm"><strong>Disease Diagnosis:</strong> Detecting the presence of viral or bacterial DNA (like for COVID-19 or HIV).</div>
-                                <div class="pop-card p-4 text-sm"><strong>Research:</strong> Cloning genes, studying gene expression, and sequencing ancient DNA.</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -710,7 +675,8 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">The Process - Step-by-Step</h3>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYAqIg1aoteR9vmPICkRfRmH01ySjFeDt2qw&s" alt="Prokaryotic Transcription Steps" class="mb-6"
                          onerror="this.src='https://placehold.co/800x250/c1bdfc/4c1d95?text=Prokaryotic+Transcription+Process'">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-3 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-purple-700 mb-2">1. Initiation</h4>
                             <p>The <strong>Holoenzyme (with &sigma;-factor)</strong> scans the DNA until the &sigma;-factor recognizes a <strong>promoter</strong>. Promoters have two key consensus sequences: the <strong>-10 sequence (Pribnow box)</strong> and the <strong>-35 sequence</strong>.
@@ -780,7 +746,8 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">The Process: Initiation with Pol II</h3>
                     <p class="mb-4">RNA Pol II (which makes mRNA) cannot bind to DNA on its own. It requires a team of <strong>General Transcription Factors (TFs)</strong>.</p>
                     <img src="https://placehold.co/700x300/c1bdfc/4c1d95?text=Eukaryotic+Promoter+Complex" alt="Eukaryotic Promoter" class="mb-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-purple-700 mb-2">Promoters & Factors</h4>
                             <p>The <strong>core promoter</strong> contains a <strong>TATA box</strong> (around -25) and an Initiator element.
@@ -811,10 +778,11 @@
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
-                        Post-Transcriptional Modification
+                        4. Post-Transcriptional Modification
                     </h2>
                     <p class="text-center max-w-3xl mx-auto mb-12">In eukaryotes, the initial "primary transcript" (or <strong>hnRNA</strong>) is not functional. It must undergo "RNA processing" in the nucleus to become a mature, stable mRNA ready for export.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-3 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-purple-700 mb-2">1. 5' Capping</h4>
                             <p>An unusual <strong>7-methylguanosine</strong> cap is added to the 5' end of the RNA via a rare <strong>5'-to-5' triphosphate linkage</strong>. This cap is essential for:
@@ -841,7 +809,8 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-900 mt-12 mb-6">Processing of other RNAs</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-purple-700 mb-2">tRNA Modification</h4>
                             <p>tRNA transcripts are also processed. This involves cleaving sequences from the 5' and 3' ends, (sometimes) splicing, and extensive <strong>base modification</strong> (e.g., methylation, reduction) to create the characteristic D and &Psi; loops.</p>
@@ -858,6 +827,104 @@
 
         <!-- 
         ========================================================================
+        PCR SECTION
+        ========================================================================
+        -->
+        <section class="py-16 scroll-animate" id="pcr">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12">
+                    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
+                        5. PCR (Polymerase Chain Reaction)
+                    </h2>
+                    <p class="text-xl text-purple-700 text-center mb-16">
+                        Replication in a Test Tube
+                    </p>
+
+                    <p class="text-center max-w-3xl mx-auto mb-12">Developed by Kary Mullis in 1983, PCR is a technique to amplify a specific segment of DNA exponentially, creating millions of copies from just a few. It mimics DNA replication but uses temperature cycles to control the process.</p>
+
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-12">
+                        <!-- PCR Ingredients -->
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">The "Recipe" (Components)</h3>
+                            <img src="https://microbenotes.com/wp-content/uploads/2022/07/Components-of-PCR-Enzymes-used-in-PCR.jpg" alt="PCR Components in a tube" class="mb-6"
+                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=PCR+Components'">
+                            <div class="space-y-4">
+                                <div class="pop-card p-4">
+                                    <h4 class="font-bold text-purple-700">DNA Template</h4>
+                                    <p class="text-sm">The source DNA containing the target sequence to be amplified.</p>
+                                </div>
+                                <div class="pop-card p-4">
+                                    <h4 class="font-bold text-purple-700">DNA Polymerase</h4>
+                                    <p class="text-sm">A heat-stable enzyme. <strong>Taq polymerase</strong> is common, but <strong>Pfu polymerase</strong> is used for high-fidelity (fewer errors) applications.</p>
+                                </div>
+                                <div class="pop-card p-4">
+                                    <h4 class="font-bold text-purple-700">Primers (Forward & Reverse)</h4>
+                                    <p class="text-sm">Short, synthetic DNA strands that define the start and end of the target sequence. They are complementary to the 3' ends of the target.</p>
+                                </div>
+                                <div class="pop-card p-4">
+                                    <h4 class="font-bold text-purple-700">dNTPs (Nucleotides)</h4>
+                                    <p class="text-sm">The building blocks (A, T, C, G) for the new DNA strands.</p>
+                                </div>
+                                <div class="pop-card p-4">
+                                    <h4 class="font-bold text-purple-700">Buffer with Mg<sup>2+</sup></h4>
+                                    <p class="text-sm">Provides the optimal chemical environment. Mg<sup>2+</sup> is a crucial co-factor for the polymerase.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PCR Cycle Animation -->
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">The "Program" (The Cycle)</h3>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqSI6dBUmW8cYL8Lg954zl4fJWKCdYmKFt5A&s" alt="PCR Cycle Steps" class="mb-6"
+                                 onerror="this.src='https://placehold.co/500x300/c1bdfc/4c1d95?text=PCR+Cycle+Steps'">
+                            <div id="pcr-diagram" class="bg-white/50 p-6 rounded-xl shadow-inner">
+                                <!-- Step 1 -->
+                                <div id="pcr-step-1" class="pcr-step rounded-lg p-4 mb-4">
+                                    <h4 class="text-xl font-bold text-red-600">1. Denaturation (~94°C)</h4>
+                                    <p>The mixture is heated to separate the double-stranded DNA into two single strands.</p>
+                                </div>
+                                <!-- Step 2 -->
+                                <div id="pcr-step-2" class="pcr-step rounded-lg p-4 mb-4">
+                                    <h4 class="text-xl font-bold text-blue-600">2. Annealing (~54°C)</h4>
+                                    <p>The temperature is lowered, allowing the primers to hybridize (bind) to their complementary sequences on the single strands.</p>
+                                </div>
+                                <!-- Step 3 -->
+                                <div id="pcr-step-3" class="pcr-step rounded-lg p-4">
+                                    <h4 class="text-xl font-bold text-green-600">3. Extension (~72°C)</h4>
+                                    <p>The temperature is raised to the optimal level for Taq polymerase, which adds dNTPs to extend the primers and synthesize new strands.</p>
+                                </div>
+                            </div>
+                            <p class="text-center mt-4 text-gray-700">This cycle is repeated 30-40 times, resulting in an <strong>exponential amplification</strong> (2<sup>n</sup>) of the target DNA.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-900 mt-20 mb-8 text-center">PCR: Pro-Tips & Applications</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <blockquote class="pop-card border-l-4 border-yellow-400 p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-2">Pro-Tip: Designing Perfect Primers</h4>
+                            <p class="text-yellow-900">A successful PCR depends on good primers. They should be:</p>
+                            <ul class="list-disc list-inside text-sm mt-2">
+                                <li><strong>Specific Length:</strong> Typically 18-25 nucleotides.</li>
+                                <li><strong>Balanced:</strong> About 40-60% GC content (Guanine/Cytosine) for good binding.</li>
+                                <li><strong>Not Self-Complementary:</strong> Must avoid binding to themselves (hairpins) or each other (primer-dimers).</li>
+                            </ul>
+                        </blockquote>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900 mb-2">Common Applications</h4>
+                            <div class="space-y-3">
+                                <div class="pop-card p-4 text-sm"><strong>Forensics:</strong> Amplifying tiny DNA samples from a crime scene for identification.</div>
+                                <div class="pop-card p-4 text-sm"><strong>Disease Diagnosis:</strong> Detecting the presence of viral or bacterial DNA (like for COVID-19 or HIV).</div>
+                                <div class="pop-card p-4 text-sm"><strong>Research:</strong> Cloning genes, studying gene expression, and sequencing ancient DNA.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ========================================================================
         NEW, EXPANDED TRANSLATION SECTION
         ========================================================================
         -->
@@ -865,7 +932,7 @@
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">
-                        4. Translation: A Deep Dive
+                        6. Translation: A Deep Dive
                     </h2>
                     <p class="text-xl text-pink-700 text-center mb-16">
                         Building the Machine (RNA to Protein)
@@ -960,7 +1027,8 @@
                     </h2>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_GaoX9vQTFyWWgcbfEwqj-ULUG0B6TvyPg&s" alt="Ribosome translating mRNA"
                          onerror="this.src='https://placehold.co/700x400/f4d4ec/d00078?text=Image+Error'">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12">
+                    <!-- LAYOUT FIX: Changed from grid-cols-3 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8 text-left mt-12">
                         <!-- Step Cards -->
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-pink-700 mb-2">1. Initiation</h4>
@@ -1001,7 +1069,8 @@
                         Eukaryotic Translation: Key Differences
                     </h2>
                     <img src="https://placehold.co/700x350/f4d4ec/d00078?text=Eukaryotic+Initiation+Scanning" alt="Eukaryotic Initiation" class="mb-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-pink-700 mb-2">Initiation (The Main Difference)</h4>
                             <p>Eukaryotes use an <strong>80S ribosome</strong> and *many* more initiation factors (<strong>eIFs</strong>).
@@ -1013,7 +1082,7 @@
                         <div class="pop-card p-6">
                             <h4 class="text-xl font-bold text-pink-700 mb-2">Elongation & Termination</h4>
                             <p>The process is nearly identical to prokaryotes, but the helper proteins have different names.
-                            <br><D
+                            <br><br>
                             * <strong>Elongation:</strong> Uses <strong>eEF1</strong> (like EF-Tu) and <strong>eEF2</strong> (like EF-G).
                             <br>
                             * <strong>Termination:</strong> A single release factor, <strong>eRF1</strong>, recognizes all three stop codons.</p>
@@ -1025,16 +1094,17 @@
         
         <!-- 
         ========================================================================
-        NEW, EXPANDED EXAM PREP SECTION
+        EXAM PREP SECTION
         ========================================================================
         -->
         <section class="py-16 scroll-animate" id="exam-prep">
             <div class="container mx-auto px-6">
                 <div class="glass-card p-8 md:p-12">
                     <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
-                        Exam Prep: Inhibitors & Key Concepts
+                        7. Exam Prep: Inhibitors & Key Concepts
                     </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- LAYOUT FIX: Changed from grid-cols-2 to grid-cols-1 -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="pop-card p-6 border-l-4 border-red-400">
                             <h4 class="font-bold text-lg text-gray-900 mb-2">Inhibitors of Transcription</h4>
                             <p class="text-red-800">These are classic exam questions:</p>
